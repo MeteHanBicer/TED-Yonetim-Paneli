@@ -8,19 +8,19 @@
     <div class="row">
       <div  class="col-md-3 col-lg-3" style="text-align: center;margin-bottom: 5px;">
         <div  style="background-color: blue;height: 80px; margin-top: 25px;">
-          <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span style="font-size: 40px;">{{kiralamailanlariadet}}
+          <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span #geneladet style="font-size: 40px;">{{kiralamailanlariadet}}
             </span><span  style="font-size: 20px;">adet</span></span>
-            <button  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
-              <br ><i   class="fa fa-list-alt fa-2x" style="color: white;margin-bottom: 10px; padding: 0px;"></i>
+            <button (click)="alert(kiralamailanlariadet,kiralamailanlarihektar,kira)" data-toggle="modal" data-target="#kiralamailanlari" class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
+              <br ><i class="fa fa-list-alt fa-2x"  style="color: white;margin-bottom: 10px; padding: 0px;"></i>
             </button>
         </div>
         <div  style="background-color: blue;height: 80px;">
-          <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span  style="font-size: 40px;">{{kiralamailanlarihektar}}
+          <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span #genelhektar  style="font-size: 40px;">{{kiralamailanlarihektar}}
             </span><span  style="font-size: 20px;">hektar</span></span>
         </div>
         <div  style="background-color: blue;height: 80px;">
           <span style="color: white;margin-left: 15px;float: left;margin-bottom: 10px;"><br>
-            <h2  class="titleText">Kiralama İlanları</h2>
+            <h2 #genelbaslik class="titleText">{{kira}}</h2>
             
           </span>
           <i  class="fa fa-pie-chart fa-3x" style="color: white; margin-right: 15px; margin-top: 20px; float: right;"></i>
@@ -30,7 +30,7 @@
         <div  style="background-color: red;height: 80px; margin-top: 25px;">
           <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span  style="font-size: 40px;">{{kiralananArazilerAdet}}
             </span><span  style="font-size: 20px;">adet</span></span>
-            <button  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
+            <button (click)="alert(kiralananArazilerAdet,kiralananArazilerHektar,kiralanan)" data-toggle="modal" data-target="#kiralamailanlari"  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
               <br ><i   class="fa fa-list-alt fa-2x" style="color: white;margin-bottom: 10px; padding: 0px;"></i>
             </button>
         </div>
@@ -40,7 +40,7 @@
         </div>
         <div  style="background-color: red;height: 80px;">
           <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;margin-bottom: 10px;"><br >
-            <h2 class="titleText">Kiralanan Araziler</h2>
+            <h2 class="titleText">{{kiralanan}}</h2>
           </span>
           <i class="fa fa-area-chart fa-3x" style="color: white; margin-right: 15px; margin-top: 20px; float: right;"></i>
         </div>
@@ -49,7 +49,7 @@
         <div  style="background-color: orange;height: 80px; margin-top: 25px;">
           <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span  style="font-size: 40px;">{{satisIlanlariAdet}}
             </span><span style="font-size: 20px;">adet</span></span>
-            <button  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
+            <button  (click)="alert(satisIlanlariAdet,satilanArazilerHektar,satis)" data-toggle="modal" data-target="#kiralamailanlari"  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
               <br ><i   class="fa fa-list-alt fa-2x" style="color: white;margin-bottom: 10px; padding: 0px;"></i>
             </button>
         </div>
@@ -59,7 +59,7 @@
         </div>
         <div  style="background-color: orange;height: 80px;">
           <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;margin-bottom: 10px;"><br >
-            <h2 class="titleText">Satış İlanları</h2>
+            <h2 class="titleText">{{satis}}</h2>
           </span>
           <br >
         </div>
@@ -68,7 +68,7 @@
         <div  style="background-color: grey;height: 80px; margin-top: 25px;">
           <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span  style="font-size: 40px;">{{satilanArazilerAdet}}
             </span><span  style="font-size: 20px;">adet</span></span>
-            <button  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
+            <button (click)="alert(satilanArazilerAdet,satilanArazilerHektar,satilan)" data-toggle="modal" data-target="#kiralamailanlari"  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
               <br ><i  class="fa fa-list-alt fa-2x" style="color: white;margin-bottom: 10px; padding: 0px;"></i>
             </button>
         </div>
@@ -78,7 +78,7 @@
         </div>
         <div  style="background-color: grey;height: 80px;">
           <span style="color: white;margin-left: 15px;float: left;margin-top: 10px;margin-bottom: 10px;"><br>
-            <h2>Satılan Araziler</h2>
+            <h2>{{satilan}}</h2>
           </span>
           <i  class="fa fa-area-chart fa-3x" style="color: white; margin-right: 15px; margin-top: 20px; float: right;"></i>
         </div>
@@ -91,7 +91,7 @@
     <div  style="background-color: #5BC0DE;height: 80px;margin-left: 3px;">
       <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span  style="font-size: 40px;">{{netGelirHesabiAdet}}
         </span><span  style="font-size: 20px;">adet</span></span>
-      <button  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
+      <button (click)="alert(netGelirHesabiAdet,netGelirHesabiHektar,net)" data-toggle="modal" data-target="#kiralamailanlari"  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
         <br ><i  class="fa fa-list-alt fa-2x" style="color: white;margin-bottom: 10px; padding: 0px;"></i>&nbsp;
       </button>
     </div>
@@ -101,7 +101,7 @@
     </div>
     <div  style="background-color: #5BC0DE;height: 80px;margin-left: 3px;">
       <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;margin-bottom: 10px;"><br>
-        <h2  class="titleText">Net Gelir Hesabı</h2>
+        <h2  class="titleText">{{net}}</h2>
       </span>
       <br ><i  class="fa fa-line-chart fa-3x" style="color: white; margin-right: 15px; margin-bottom: 10px; float: right;"></i>
     </div>
@@ -109,7 +109,7 @@
     <div  style="background-color: #3399FF;height: 80px; margin-top: 25px; margin-left: 3px;">
       <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span style="font-size: 40px;">{{kiymetTakdiriAdet}}
         </span><span  style="font-size: 20px;">adet</span></span>
-      <button  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
+      <button (click)="alert(kiymetTakdiriAdet,kiymetTakdiriHektar,takdir)" data-toggle="modal" data-target="#kiralamailanlari"  class="btn btn" style="background-color: transparent; float: right; outline: none;" type="button">
         <br ><i  class="fa fa-list-alt fa-2x" style="color: white;margin-bottom: 10px; padding: 0px;"></i>&nbsp;
       </button>
     </div>
@@ -119,9 +119,52 @@
     </div>
     <div  style="background-color: #3399FF;height: 80px;margin-left: 3px;">
       <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;margin-bottom: 10px;"><br >
-        <h2  class="titleText">Kıymet Takdiri</h2>
+        <h2  class="titleText">{{takdir}}</h2>
       </span>
       <br ><i  class="fa fa-bar-chart fa-3x" style="color: white; margin-right: 15px; margin-bottom: 10px; float: right;"></i>
     </div>
   </div>
 </div>
+
+
+
+
+<!-- modal kiralama ilanları -->
+<div class="modal fade" tabindex="-1" role="dialog" id="kiralamailanlari">
+  <div class="modal-dialog">
+    <div class="modal-content" style="height: 500px; width: 800px;">
+      <div class="modal-header">
+        <h4 class="modal-title">{{genelbaslikgelen}}</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div style="height: 500px; width: 800px;" class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">İl</th>
+              <th scope="col">İlçe</th>
+              <th scope="col">Mahalle</th>
+              <th scope="col">Başvuru Sayısı</th>
+              <th scope="col">Başvuru Alanı (ha)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">-</th>
+              <td>{{hepsiil}}</td>
+              <td>{{hepsiilce}}</td>
+              <td>{{hepsimahalle}}</td>
+              <td>{{geneladetgelen}}</td>
+              <td>{{genelhektargelen}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+      </div> -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
