@@ -88,6 +88,7 @@
   </div>
 </div>
   </div>
+  <div style="margin-left: 2px;" class="row">
   <div  class="col-md-3 col-lg-3" style="text-align: center;margin-bottom: 5px;">
     <div  style="background-color: #5BC0DE;height: 80px;margin-left: 3px;">
       <span  style="color: white;margin-left: 15px;float: left;margin-top: 10px;"><span  style="font-size: 40px;">{{netGelirHesabiAdet}}
@@ -124,8 +125,20 @@
       </span>
       <br ><i  class="fa fa-bar-chart fa-3x" style="color: white; margin-right: 15px; margin-bottom: 10px; float: right;"></i>
     </div>
-  </div>
 </div>
+<div class="col-md-9">
+  <div class="chart">
+  <canvas  baseChart
+  [datasets]="[{data:[kiralamailanlariadet,kiralananArazilerAdet,satisIlanlariAdet,satilanArazilerAdet,netGelirHesabiAdet,kiymetTakdiriAdet],label:'Başvuru Sayısı'},{data:[kiralamailanlarihektar,kiralananArazilerHektar,satisIlanlariHektar,satilanArazilerHektar,netGelirHesabiHektar,kiymetTakdiriHektar],label:'Başvuru Alanı'}]"
+  [labels]=[kira,kiralanan,satis,satilan,net,takdir]
+  [options]="barChartOptions"
+  [legend]="barChartLegend"
+  [chartType]="barChartType">
+  </canvas>
+</div></div>
+</div>
+
+
 
 <!-- modal kiralama ilanları -->
 <div class="modal fade" tabindex="-1" role="dialog" id="kiralamailanlari">
@@ -163,17 +176,11 @@
           </tbody>
         </table>
       </div>
+      
     </div>
   </div>
 </div>
-<div class="chart">
-  <canvas baseChart
-  [datasets]="[{data:[kiralamailanlariadet,kiralananArazilerAdet,satisIlanlariAdet,satilanArazilerAdet,netGelirHesabiAdet,kiymetTakdiriAdet],label:'Başvuru Sayısı'},{data:[kiralamailanlarihektar,kiralananArazilerHektar,satisIlanlariHektar,satilanArazilerHektar,netGelirHesabiHektar,kiymetTakdiriHektar],label:'Başvuru Alanı'}]"
-  [labels]=[kira,kiralanan,satis,satilan,net,takdir]
-  [options]="barChartOptions"
-  [legend]="barChartLegend"
-  [chartType]="barChartType">
-  </canvas>
+
 
 
 
