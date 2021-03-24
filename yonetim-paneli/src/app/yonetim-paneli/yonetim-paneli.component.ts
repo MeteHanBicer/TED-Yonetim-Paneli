@@ -1,10 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-const SAMPLE_BARCHART_DATA:any[] = [
-  // { data: [2016,2017,2019,2020,2021],label:'Q3 Sales'},
-  { data: [1,1,4,4,5,2],label:'Başvuru Sayısı'},
-  { data: [0.829943,0.829943,1.697608,1.697608,2.527551,1.235468],label:'Başvuru Alanı'}
-];
-const SAMPLE_BARCHART_LABELS : string[] = [ 'Kiralama İlanları','Kiralanan Araziler','Satış İlanları','Satılan Araziler','Net Gelir Hesabı','Kıymet Takdiri'];
+
 @Component({
   selector: 'app-yonetim-paneli',
   templateUrl: './yonetim-paneli.component.html',
@@ -13,14 +8,7 @@ const SAMPLE_BARCHART_LABELS : string[] = [ 'Kiralama İlanları','Kiralanan Ara
 export class YonetimPaneliComponent implements OnInit {
   
   constructor() { }
-  public barChartData : any[] = SAMPLE_BARCHART_DATA;
-  public barChartLabels:string[] = SAMPLE_BARCHART_LABELS;
-  public barChartType = 'bar';
-  public barChartLegend = false;
-  public barChartOptions:any = {
-    scaleShowVerticalLines : false,
-    resonsive : true
-  };
+  
   ngOnInit() {
     
   }
@@ -55,8 +43,21 @@ this.geneladetgelen=geneladet;
 this.genelhektargelen=genelhektar;
 this.genelbaslikgelen=ad;
 }
+// public barChartData : any[] = SAMPLE_BARCHART_DATA;
+  // public barChartLabels:string[] = SAMPLE_BARCHART_LABELS;
+  public barChartType = 'bar';
+  public barChartLegend = true;
+  public barChartOptions:any = {
+    scaleShowVerticalLines : false,
+    resonsive : true
+  };
   }
-
+  // const SAMPLE_BARCHART_DATA:any[] = [
+  //   { data: [2016,2017,2019,2020,2021],label:'Q3 Sales'},
+  //   { data: [1,1,4,4,5,2],label:'Başvuru Sayısı'},
+  //   { data: [0.829943,0.829943,1.697608,1.697608,2.527551,1.235468],label:'Başvuru Alanı'}
+  // ];
+  // const SAMPLE_BARCHART_LABELS : string[] = [ 'Kiralama İlanları','Kiralanan Araziler','Satış İlanları','Satılan Araziler','Net Gelir Hesabı','Kıymet Takdiri'];
 
 
 

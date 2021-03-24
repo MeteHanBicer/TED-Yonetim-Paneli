@@ -126,9 +126,6 @@
   </div>
 </div>
 
-
-
-
 <!-- modal kiralama ilanları -->
 <div class="modal fade" tabindex="-1" role="dialog" id="kiralamailanlari">
   <div class="modal-dialog">
@@ -137,6 +134,10 @@
         <h4 class="modal-title">{{genelbaslikgelen}}</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
+
+      <!-- Başlıyor -->
+      
+        <!-- Bitiyor -->
       <div style="height: 500px; width: 800px;" class="modal-body">
         <table class="table">
           <thead>
@@ -164,16 +165,17 @@
     </div>
   </div>
 </div>
-
-
-
-
-
 <div class="chart">
   <canvas baseChart
-  [datasets]="barChartData"
-  [labels]="barChartLabels"
+  [datasets]="[{data:[kiralamailanlariadet,kiralananArazilerAdet,satisIlanlariAdet,satilanArazilerAdet,netGelirHesabiAdet,kiymetTakdiriAdet],label:'Başvuru Sayısı'},{data:[kiralamailanlarihektar,kiralananArazilerHektar,satisIlanlariHektar,satilanArazilerHektar,netGelirHesabiHektar,kiymetTakdiriHektar],label:'Başvuru Alanı'}]"
+  [labels]=[kira,kiralanan,satis,satilan,net,takdir]
   [options]="barChartOptions"
   [legend]="barChartLegend"
   [chartType]="barChartType">
   </canvas>
+
+
+
+
+
+
