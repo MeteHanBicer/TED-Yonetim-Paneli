@@ -24,9 +24,12 @@ export class YonetimPaneliComponent implements OnInit {
   netGelirHesabiHektar=2.527551;
   kiymetTakdiriAdet=2;
   kiymetTakdiriHektar=1.235468;
+  kiymetTakdiriHektar1=617.734;
+
   hepsiil="KARS";
   hepsiilce="ARPAÇAY";
   hepsimahalle="METEHAN";
+  irem="İREM";
   kira="Kiralama İlanları";
   satis="Satış İlanları";
   kiralanan="Kiralanan Araziler";
