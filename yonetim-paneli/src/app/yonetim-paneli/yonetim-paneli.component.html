@@ -128,7 +128,7 @@
 </div>
 <div class="col-md-9">
   <div class="chart">
-  <canvas  baseChart
+  <canvas id="bar"  height="37" width="100" baseChart
   [datasets]="[{data:[kiralamailanlariadet,kiralananArazilerAdet,satisIlanlariAdet,satilanArazilerAdet,netGelirHesabiAdet,kiymetTakdiriAdet],label:'Başvuru Sayısı'},{data:[kiralamailanlarihektar,kiralananArazilerHektar,satisIlanlariHektar,satilanArazilerHektar,netGelirHesabiHektar,kiymetTakdiriHektar],label:'Başvuru Alanı'}]"
   [labels]=[kira,kiralanan,satis,satilan,net,takdir]
   [options]="barChartOptions"
